@@ -2,9 +2,9 @@ import React from 'react'
 
 import { database } from './firebaseConf'
 
-const courseRef = database.ref('/JFDDL7')
+// const courseRef = database.ref('/JFDDL7')
 
-courseRef.once(
+database.ref('/JFDDL7').once(
     'value'
 )
     .then(snapshot => console.log(snapshot.val()))
