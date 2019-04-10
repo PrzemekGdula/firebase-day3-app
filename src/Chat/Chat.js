@@ -41,13 +41,18 @@ class Chat extends React.Component {
 
     onDeleteMessageClick = (key) => {
         // fetch(
-        //     'https://ad-snadbox.firebaseio.com/JFDDL7/messages/' + key + '.json',
-        //     {
-        //         method: 'DELETE',
-        //     }
+        //   'https://ad-snadbox.firebaseio.com/JFDDL7/messages/' + key + '.json',
+        //   {
+        //     method: 'DELETE',
+        //   }
         // )
 
-        database.ref('/JFDDL7/messages/' + key).remove()
+        // database.ref('/JFDDL7/messages/' + key).set(null)
+        // line above works the same
+        // database.ref('/JFDDL7/messages/' + key).remove()
+
+        // we can access to ref children by child method
+        messagesRef.child(key).remove()
     }
 
     render() {
