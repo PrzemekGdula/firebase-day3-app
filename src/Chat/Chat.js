@@ -34,13 +34,7 @@ class Chat extends React.Component {
             date: Date.now(),
             author: 'Przemek Gdula'
         }
-        fetch(
-            'https://ad-snadbox.firebaseio.com/JFDDL7/messages.json',
-            {
-                method: 'POST',
-                body: JSON.stringify(newMessage)
-            }
-        )
+        database.ref('/JFDDL7/messages').push(newMessage)
     }
 
     render() {
