@@ -55,6 +55,10 @@ class Chat extends React.Component {
         messagesRef.child(key).remove()
     }
 
+    componentWillUnmount() {
+        messagesRef.off()
+    }
+
     render() {
         return (
             <div>
