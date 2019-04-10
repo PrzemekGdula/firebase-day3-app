@@ -40,12 +40,14 @@ class Chat extends React.Component {
     }
 
     onDeleteMessageClick = (key) => {
-        fetch(
-            'https://ad-snadbox.firebaseio.com/JFDDL7/messages/' + key + '.json',
-            {
-                method: 'DELETE',
-            }
-        )
+        // fetch(
+        //     'https://ad-snadbox.firebaseio.com/JFDDL7/messages/' + key + '.json',
+        //     {
+        //         method: 'DELETE',
+        //     }
+        // )
+
+        database.ref('/JFDDL7/messages/' + key).remove()
     }
 
     render() {
