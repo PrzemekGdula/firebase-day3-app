@@ -1,4 +1,5 @@
 import firebase from 'firebase'
+
 const config = {
     apiKey: 'AIzaSyDDOwPtv46O8gP0f-RBsvT9nDp3yrRXxtQ',
     authDomain: 'ad-snadbox.firebaseapp.com',
@@ -9,3 +10,5 @@ const config = {
 }
 
 firebase.initializeApp(config)
+
+export const database = firebase.database()
